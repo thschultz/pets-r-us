@@ -10,7 +10,7 @@ app.set('view engine', 'html');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -19,16 +19,23 @@ app.get('/', (req, res) => {
     })
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', {
+app.get('/grooming', (req, res) => {
+    res.render('grooming', {
         title: 'Hello Routes: About',
         message: 'Welcome to the Hello Routes About Page'
     })
 })
 
-app.get('/contact', (req, res) => {
-    res.render('contact', {
-        title: 'Hello Routes: Contact',
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: 'Hello Routes: boarding',
+        message: 'Welcome to the Hello Routes Contact Page'
+    })
+})
+
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: 'Hello Routes: training',
         message: 'Welcome to the Hello Routes Contact Page'
     })
 })
