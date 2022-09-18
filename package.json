@@ -19,7 +19,9 @@
   "homepage": "https://github.com/thschultz/pets-r-us#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

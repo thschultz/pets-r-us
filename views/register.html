@@ -1,0 +1,25 @@
+<%- include('./partials/_header.html') %>
+    <div class="mainContent">
+        <h1>Register</h1>
+        <div class="row">
+            <div class="column">
+                <img width="400px" src="" alt="">
+            </div>
+            <div class="column content">
+                <p>Information goes here</p>
+            </div>
+
+        </div>
+
+        <form class="input" action="/register" method="post">
+            <label class="wordy words">Customer ID</label>
+            <input type="text" name="customerId">
+            <label class="wordy words">Email</label>
+            <input type="text" name="email">
+            <br>
+            <input type="submit" id="submit"></input>
+        </form>
+    </div>
+
+    <!-- use the partial footer template -->
+    <%- include('./partials/_footer.html') %>
