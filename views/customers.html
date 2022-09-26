@@ -1,0 +1,29 @@
+<%- include('./partials/_header.html') %>
+    <div class="mainContent">
+        <h1>Customers</h1>
+        <div class="row">
+            <table id="customer-list">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% customerList.forEach((customer)=> { %>
+                        <tr>
+                            <td>
+                                <%= customer.customerId %>
+                            </td>
+                            <td>
+                                <%= customer.email %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <%- include('./partials/_footer.html') %>

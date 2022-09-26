@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const Customers = require("./models/customers");
+
 
 const app = express();
 
@@ -50,6 +52,13 @@ app.get('/register', (req, res) => {
     })
 })
 
+app.get('/customers', (req, res) => {
+    res.render('customers', {
+        title: 'Hello Routes: customers',
+        message: 'Welcome to the Hello Routes Customers Page'
+    })
+})
+
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT ' + PORT);
 });
@@ -78,5 +87,18 @@ mongoose.connect(conn).then(() => {
     console.log("MongoDB successfully connected.");
 }).catch((err) => {
     console.log("MongoDB Error: " + err);
+});
+
+app.get("/customers", (req, res) => {
+    Customers.find({}, (err, list) => {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            res.render("customers", {
+                customerList: list
+            });
+        }
+    });
 });
 
