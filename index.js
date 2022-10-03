@@ -59,6 +59,13 @@ app.get('/customers', (req, res) => {
     })
 })
 
+app.get('/appointments', (req, res) => {
+    res.render('appointments', {
+        title: 'Hello Routes: appointments',
+        message: 'Welcome to the Hello Routes Customers Page'
+    })
+})
+
 app.listen(PORT, () => {
     console.log('Application started and listening on PORT ' + PORT);
 });

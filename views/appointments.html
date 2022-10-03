@@ -1,0 +1,54 @@
+<%- include('./partials/_header.html') %>
+    <div class="mainContent">
+        <h1>Appointments</h1>
+        <div class="row">
+            <div class="column">
+                <img width="400px" src="" alt="">
+            </div>
+            <div class="form">
+                <form action="/booking" method="post">
+
+                    <div class="form-field">
+                        <label for="customerId">CustomerId</label><br />
+                        <input type="text" class="input" name="customerId" id="customerId" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="firstName">First Name</label><br />
+                        <input type="text" class="input" name="firstName" id="firstName" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="lastName">Last name</label><br />
+                        <input type="text" class="input" name="lastName" id="lastName" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label><br />
+                        <input type="email" class="input" name="email" id="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="service">Service</label><br />
+                        <select name="service" id="service" class="drop-down-menu full-width" required>
+
+                            <option value="'grooming'">Grooming</option>
+
+                            <option value="'boarding'">Boarding</option>
+
+                            <option value="'training'">Training</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <input type="submit" value="Book Appointment" class="btn btn-primary full-width">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <%- include('./partials/_footer.html') %>
